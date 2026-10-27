@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>soul — the rosary</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <link rel="icon" type="image/png" href="/soul/soulfavicon.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/png" href="/soul/soulfavicon_dark.png" media="(prefers-color-scheme: dark)">
+    <link rel="apple-touch-icon" sizes="180x180" href="/soul/apple-touch-icon.png">
+
+    <style>
+      :root {
+        --bg: #ffffff;
+        --fg: #111111;
+        --link: #005bff;
+
+        --mark-light: rgba(255, 241, 118, 0.9);
+        --mark-dark: rgba(255, 235, 59, 0.9);
+        --quote-fg: #555;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #000000;
+          --fg: #ffffff;
+          --link: #8fc9ed;
+          --quote-fg: #bbb;
+        }
+      }
+
+      html, body { height: 100%; }
+      html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+        line-height: 1.35;
+        -webkit-font-smoothing: antialiased;
+        padding: 16px;
+        padding-bottom: 120px;
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        body {
+          font-size: 12.6px;
+        }
+      }
+
+      a, a:visited {
+        color: var(--link);
+        text-decoration: none;
+      }
+
+      a:hover { text-decoration: underline; }
+
+      pre {
+        margin: 0;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+      }
+
+      mark {
+        background: none;
+        color: inherit;
+        padding: 0 2px;
+        background-image: linear-gradient(
+          transparent 62%,
+          var(--mark-light) 62%
+        );
+      }
+
+      @media (prefers-color-scheme: dark) {
+        mark {
+          background: none;
+          padding: 0;
+          color: var(--fg);
+          text-decoration: underline;
+          text-decoration-thickness: 2px;
+          text-underline-offset: 0.15em;
+          text-decoration-color: var(--mark-dark);
+        }
+      }
+
+      .quote {
+        color: var(--quote-fg);
+      }
+
+      .counter {
+        color: #767676;
+        font-size: 0.8em;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .counter {
+          color: #999;
+        }
+      }
+
+      main {
+        max-width: 900px;
+      }
+
+      .question {
+        margin: 48px 0;
+      }
+
+      .question-title {
+        margin: 0 0 10px 0;
+      }
+
+      .q-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 8px 28px;
+        align-items: start;
+      }
+
+      @media (max-width: 640px) {
+        .q-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .explain {
+        margin: 0;
+      }
+
+      .verses {
+        margin: 0;
+      }
+
+      .verse-item {
+        margin: 0 0 14px 0;
+      }
+
+      .verse-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .verse-quote {
+        display: block;
+        color: var(--quote-fg);
+        font-size: 0.85em;
+        margin-top: 2px;
+      }
+    
+      details { margin: 0; }
+      summary { cursor: pointer; list-style: none; color: var(--link); }
+      summary::-webkit-details-marker { display: none; }
+      summary::before { content: "+ "; }
+      details[open] > summary::before { content: "- "; }
+      .set > .body { padding: 6px 0 14px 2ch; }
+      .mys { margin: 10px 0 18px; }
+      .mys .title { font-weight: bold; }
+      .alt { margin: 6px 0 0 2ch; }
+      .alt > .body { padding: 4px 0 8px 2ch; color: var(--quote-fg); }
+      .today { color: var(--quote-fg); }
+    </style>
+  </head>
+
+  <body>
+<pre>
+guide | the rosary
+↳ <a href="index.html">back to index</a>
+↳ en // <a href="https://ivana-rep.github.io/soul-it/the-rosary.html" target="_blank">it</a>
+
+the rosary is a prayer said on a string of beads. while a few short prayers repeat, you go through the life of Jesus one scene at a time, from the angel's visit to Mary to the Resurrection, with Mary beside you. John Paul II called it a "compendium of the Gospel": twenty short scenes that together hold the whole story.
+
+you don't need to know much to start.
+
+→ why the repetition
+
+ten hail Marys in a row can sound boring. John Paul II answers with an image from love: people in love say "i love you" over and over, and it's never quite the same twice, because the feeling behind it is alive. the words stay the same so the heart doesn't have to look for new ones, and can stay on Him.
+
+but doesn't Jesus warn against repeating words? in Matthew 6:7 He says: "when you pray, don't babble on and on as the Gentiles do. they think their prayers are answered merely by repeating their words again and again." what He criticizes is empty words, piled up to wear God down. He doesn't forbid repetition: in Gethsemane He prayed a third time, "saying the same things again" (Matthew 26:44). Psalm 136 repeats "His faithful love endures forever" twenty-six times, and in Revelation 4:8 the living beings keep saying "holy, holy, holy" day after day and night after night. the Catechism (2668) says that a name repeated "by a humbly attentive heart" is not "heaping up empty phrases". the rosary becomes vain repetition only when the heart is somewhere else.
+
+→ what you need
+
+a rosary. you can count on your fingers, but holding something helps: the beads keep your hands busy and tell you where you are, so you don't have to count.
+
+how the beads are laid out:
+crucifix         sign of the cross, creed
+1 large bead     our father
+3 small beads    hail Mary
+then a loop of five decades, each one:
+1 large bead     our father
+10 small beads   hail Mary
+
+the beads all lead back to the crucifix, where the prayer starts and ends. John Paul II reads this as a picture of the Christian life: everything starts from Christ and leads back to Him.
+
+→ step by step
+
+1. make the sign of the cross.
+2. holding the crucifix, say the apostles' creed.
+3. on the first large bead, say an our father.
+4. on each of the next three beads, say a hail Mary.
+5. say a glory be.
+6. then, for each of the five decades:
+   announce the mystery and read its passage (below)
+   an our father on the large bead
+   a hail Mary on each of the ten small beads
+   a glory be
+   the Fatima prayer, if you want
+7. after the fifth decade, say the hail holy queen and the closing prayer, then make the sign of the cross.
+
+→ each decade, slowly
+
+the steps above are only the frame. the praying happens inside each decade, and John Paul II describes how:
+* announce the mystery and picture the scene: the place, the people, what's happening.
+* read the short passage that goes with it.
+* stay silent for a moment before starting the words.
+* say the hail Marys without rushing them. in the middle of each one is the name of Jesus, which John Paul II calls "the centre of gravity" of the prayer. if your mind wanders, go back to the scene, not to the count.
+* you don't have to hold the mystery, the words and your intentions in mind all at once. the main thing is to be with Him. you can ask Him: "what are You saying to me?"
+* at the end, ask for the grace that mystery points to (its "fruit", listed with each one below).
+
+→ the mysteries and their days
+
+monday, saturday     joyful
+tuesday, friday      sorrowful
+wednesday, sunday    glorious
+thursday             luminous
+
+on the Sundays of Advent many pray the joyful mysteries, and on the Sundays of Lent the sorrowful ones. today's set is marked below. each mystery has a short passage from Scripture (the ones suggested by the US bishops) and the grace to ask for.
+
+
+<details class="set" data-set="joyful"><summary>↳ joyful mysteries <span class="counter">// monday and saturday</span><span class="today"></span></summary><div class="body"><div class="mys"><span class="title">1. the annunciation</span>
+<a href="https://www.biblegateway.com/passage/?search=Luke+1%3A26-27&amp;version=NLT" target="_blank">Luke 1:26-27</a>
+<span class="counter" id="v26">26</span> in the sixth month of Elizabeth's pregnancy, God sent the angel Gabriel to Nazareth, a village in Galilee,
+<span class="counter" id="v27">27</span> to a virgin named Mary.
+she was engaged to be married to a man named Joseph, a descendant of King David.
+<span class="counter">fruit: humility</span></div><div class="mys"><span class="title">2. the visitation</span>
+<a href="https://www.biblegateway.com/passage/?search=Luke+1%3A39-42&amp;version=NLT" target="_blank">Luke 1:39-42</a>
+<span class="counter" id="v39">39</span> a few days later Mary hurried to the hill country of Judea, to the town
+<span class="counter" id="v40">40</span> where Zechariah lived.
+she entered the house and greeted Elizabeth.
+<span class="counter" id="v41">41</span> at the sound of Mary's greeting, Elizabeth's child leaped within her, and Elizabeth was filled with the Holy Spirit.
+<span class="counter" id="v42">42</span> Elizabeth gave a glad cry and exclaimed to Mary, "God has blessed you above all women, and your child is blessed."
+<span class="counter">fruit: love of neighbor</span></div><div class="mys"><span class="title">3. the nativity</span>
+<a href="https://www.biblegateway.com/passage/?search=Luke+2%3A1-7&amp;version=NLT" target="_blank">Luke 2:1-7</a>
+<span class="counter" id="v1">1</span> at that time the Roman emperor, Augustus, decreed that a census should be taken throughout the Roman Empire.
+<span class="counter" id="v2">2</span> (this was the first census taken when Quirinius was governor of Syria.)
+<span class="counter" id="v3">3</span> all returned to their own ancestral towns to register for this census.
+<span class="counter" id="v4">4</span> and because Joseph was a descendant of King David, he had to go to Bethlehem in Judea, David's ancient home.
+he traveled there from the village of Nazareth in Galilee.
+<span class="counter" id="v5">5</span> he took with him Mary, to whom he was engaged, who was now expecting a child.
+<span class="counter" id="v6">6</span> and while they were there, the time came for her baby to be born.
+<span class="counter" id="v7">7</span> she gave birth to her firstborn son.
+she wrapped Him snugly in strips of cloth and laid Him in a manger, because there was no lodging available for them.
+<span class="counter">fruit: poverty</span></div><div class="mys"><span class="title">4. the presentation in the temple</span>
+<a href="https://www.biblegateway.com/passage/?search=Luke+2%3A21-24&amp;version=NLT" target="_blank">Luke 2:21-24</a>
+<span class="counter" id="v21">21</span> eight days later, when the baby was circumcised, He was named Jesus, the name given Him by the angel even before He was conceived.
+<span class="counter" id="v22">22</span> then it was time for their purification offering, as required by the law of Moses after the birth of a child; so His parents took Him to Jerusalem to present Him to the Lord.
+<span class="counter" id="v23">23</span> the law of the Lord says, "if a woman's first child is a boy, he must be dedicated to the Lord."
+<span class="counter" id="v24">24</span> so they offered the sacrifice required in the law of the Lord, "either a pair of turtledoves or two young pigeons."
+<span class="counter">fruit: purity of heart and body</span></div><div class="mys"><span class="title">5. the finding in the temple</span>
+<a href="https://www.biblegateway.com/passage/?search=Luke+2%3A41-47&amp;version=NLT" target="_blank">Luke 2:41-47</a>
+<span class="counter" id="v41">41</span> every year Jesus' parents went to Jerusalem for the Passover festival.
+<span class="counter" id="v42">42</span> when Jesus was twelve years old, they attended the festival as usual.
+<span class="counter" id="v43">43</span> after the celebration was over, they started home to Nazareth, but Jesus stayed behind in Jerusalem.
+His parents didn't miss Him at first,
+<span class="counter" id="v44">44</span> because they assumed He was among the other travelers.
+but when He didn't show up that evening, they started looking for Him among their relatives and friends.
+<span class="counter" id="v45">45</span> when they couldn't find Him, they went back to Jerusalem to search for Him there.
+<span class="counter" id="v46">46</span> three days later they finally discovered Him in the Temple, sitting among the religious teachers, listening to them and asking questions.
+<span class="counter" id="v47">47</span> all who heard Him were amazed at His understanding and His answers.
+<span class="counter">fruit: devotion to Jesus</span></div></div></details><details class="set" data-set="luminous"><summary>↳ luminous mysteries <span class="counter">// thursday</span><span class="today"></span></summary><div class="body"><div class="mys"><span class="title">1. the baptism of Jesus</span>
+<a href="https://www.biblegateway.com/passage/?search=Matthew+3%3A16-17&amp;version=NLT" target="_blank">Matthew 3:16-17</a>
+<span class="counter" id="v16">16</span> after His baptism, as Jesus came up out of the water, the heavens were opened and He saw the Spirit of God descending like a dove and settling on Him.
+<span class="counter" id="v17">17</span> and a voice from Heaven said, "this is My dearly loved Son, who brings Me great joy."
+<span class="counter">fruit: openness to the Holy Spirit</span></div><div class="mys"><span class="title">2. the wedding feast of Cana</span>
+<a href="https://www.biblegateway.com/passage/?search=John+2%3A1-5&amp;version=NLT" target="_blank">John 2:1-5</a>
+<span class="counter" id="v1">1</span> the next day there was a wedding celebration in the village of Cana in Galilee.
+Jesus' mother was there,
+<span class="counter" id="v2">2</span> and Jesus and His disciples were also invited to the celebration.
+<span class="counter" id="v3">3</span> the wine supply ran out during the festivities, so Jesus' mother told Him, "they have no more wine."
+<span class="counter" id="v4">4</span> "dear woman, that's not our problem," Jesus replied.
+"My time has not yet come."
+<span class="counter" id="v5">5</span> but His mother told the servants, "do whatever He tells you."
+<span class="counter">fruit: to Jesus through Mary</span></div><div class="mys"><span class="title">3. the proclamation of the Kingdom, with the call to conversion</span>
+<a href="https://www.biblegateway.com/passage/?search=Mark+1%3A15&amp;version=NLT" target="_blank">Mark 1:15</a>
+<span class="counter" id="v15">15</span> "the time promised by God has come at last!" He announced.
+"the Kingdom of God is near!
+repent of your sins and believe the Good News!"
+<span class="counter">fruit: conversion</span></div><div class="mys"><span class="title">4. the transfiguration</span>
+<a href="https://www.biblegateway.com/passage/?search=Matthew+17%3A1-2&amp;version=NLT" target="_blank">Matthew 17:1-2</a>
+<span class="counter" id="v1">1</span> six days later Jesus took Peter and the two brothers, James and John, and led them up a high mountain to be alone.
+<span class="counter" id="v2">2</span> as the men watched, Jesus' appearance was transformed so that His face shone like the sun, and His clothes became as white as light.
+<span class="counter">fruit: desire for holiness</span></div><div class="mys"><span class="title">5. the institution of the Eucharist</span>
+<a href="https://www.biblegateway.com/passage/?search=Matthew+26%3A26&amp;version=NLT" target="_blank">Matthew 26:26</a>
+<span class="counter" id="v26">26</span> as they were eating, Jesus took some bread and blessed it.
+then He broke it in pieces and gave it to the disciples, saying, "take this and eat it, for this is My body."
+<span class="counter">fruit: adoration</span></div></div></details><details class="set" data-set="sorrowful"><summary>↳ sorrowful mysteries <span class="counter">// tuesday and friday</span><span class="today"></span></summary><div class="body"><div class="mys"><span class="title">1. the agony in the garden</span>
+<a href="post.html?p=bible/matthew_26-36-46.txt">Matthew 26:36-39</a>
+<span class="counter" id="v36">36</span> then Jesus went with them to the olive grove called Gethsemane, and He said, "sit here while I go over there to pray."
+<span class="counter" id="v37">37</span> He took Peter and Zebedee's two sons, James and John, and He became anguished and distressed.
+<span class="counter" id="v38">38</span> He told them, "My soul is crushed with grief to the point of death.
+stay here and keep watch with Me."
+<span class="counter" id="v39">39</span> He went on a little farther and bowed with His face to the ground, praying, "My Father!
+if it is possible, let this cup of suffering be taken away from Me.
+yet I want Your will to be done, not Mine."
+<span class="counter">fruit: obedience to God's will</span></div><div class="mys"><span class="title">2. the scourging at the pillar</span>
+<a href="https://www.biblegateway.com/passage/?search=Matthew+27%3A26&amp;version=NLT" target="_blank">Matthew 27:26</a>
+<span class="counter" id="v26">26</span> so Pilate released Barabbas to them.
+he ordered Jesus flogged with a lead-tipped whip, then turned Him over to the Roman soldiers to be crucified.
+<span class="counter">fruit: mortification</span></div><div class="mys"><span class="title">3. the crowning with thorns</span>
+<a href="https://www.biblegateway.com/passage/?search=Matthew+27%3A27-29&amp;version=NLT" target="_blank">Matthew 27:27-29</a>
+<span class="counter" id="v27">27</span> some of the governor's soldiers took Jesus into their headquarters and called out the entire regiment.
+<span class="counter" id="v28">28</span> they stripped Him and put a scarlet robe on Him.
+<span class="counter" id="v29">29</span> they wove thorn branches into a crown and put it on His head, and they placed a reed stick in His right hand as a scepter.
+then they knelt before Him in mockery and taunted, "hail! king of the Jews!"
+<span class="counter">fruit: courage</span></div><div class="mys"><span class="title">4. the carrying of the cross</span>
+<a href="https://www.biblegateway.com/passage/?search=Mark+15%3A21-22&amp;version=NLT" target="_blank">Mark 15:21-22</a>
+<span class="counter" id="v21">21</span> a passerby named Simon, who was from Cyrene, was coming in from the countryside just then, and the soldiers forced him to carry Jesus' cross.
+(Simon was the father of Alexander and Rufus.)
+<span class="counter" id="v22">22</span> and they brought Jesus to a place called Golgotha (which means "place of the skull").
+<span class="counter">fruit: patience</span></div><div class="mys"><span class="title">5. the crucifixion</span>
+<a href="https://www.biblegateway.com/passage/?search=Luke+23%3A33-46&amp;version=NLT" target="_blank">Luke 23:33-46</a>
+<span class="counter" id="v33">33</span> when they came to a place called the Skull, they nailed Him to the cross.
+and the criminals were also crucified, one on His right and one on His left.
+<span class="counter" id="v34">34</span> Jesus said, "Father, forgive them, for they don't know what they are doing."
+and the soldiers gambled for His clothes by throwing dice.
+<span class="counter" id="v35">35</span> the crowd watched and the leaders scoffed.
+"He saved others," they said, "let Him save Himself if He is really God's Messiah, the Chosen One."
+<span class="counter" id="v36">36</span> the soldiers mocked Him, too, by offering Him a drink of sour wine.
+<span class="counter" id="v37">37</span> they called out to Him, "if You are the King of the Jews, save Yourself!"
+<span class="counter" id="v38">38</span> a sign was fastened above Him with these words: "this is the King of the Jews."
+<span class="counter" id="v39">39</span> one of the criminals hanging beside Him scoffed, "so You're the Messiah, are You?
+prove it by saving Yourself, and us, too, while You're at it!"
+<span class="counter" id="v40">40</span> but the other criminal protested, "don't you fear God even when you have been sentenced to die?
+<span class="counter" id="v41">41</span> we deserve to die for our crimes, but this man hasn't done anything wrong."
+<span class="counter" id="v42">42</span> then he said, "Jesus, remember me when You come into Your Kingdom."
+<span class="counter" id="v43">43</span> and Jesus replied, "I assure you, today you will be with Me in paradise."
+<span class="counter" id="v44">44</span> by this time it was about noon, and darkness fell across the whole land until three o'clock.
+<span class="counter" id="v45">45</span> the light from the sun was gone.
+and suddenly, the curtain in the sanctuary of the Temple was torn down the middle.
+<span class="counter" id="v46">46</span> then Jesus shouted, "Father, I entrust My spirit into Your hands!"
+and with those words He breathed His last.
+<span class="counter">fruit: sorrow for our sins</span></div></div></details><details class="set" data-set="glorious"><summary>↳ glorious mysteries <span class="counter">// wednesday and sunday</span><span class="today"></span></summary><div class="body"><div class="mys"><span class="title">1. the resurrection</span>
+<a href="https://www.biblegateway.com/passage/?search=Luke+24%3A1-5&amp;version=NLT" target="_blank">Luke 24:1-5</a>
+<span class="counter" id="v1">1</span> but very early on Sunday morning the women went to the tomb, taking the spices they had prepared.
+<span class="counter" id="v2">2</span> they found that the stone had been rolled away from the entrance.
+<span class="counter" id="v3">3</span> so they went in, but they didn't find the body of the Lord Jesus.
+<span class="counter" id="v4">4</span> as they stood there puzzled, two men suddenly appeared to them, clothed in dazzling robes.
+<span class="counter" id="v5">5</span> the women were terrified and bowed with their faces to the ground.
+then the men asked, "why are you looking among the dead for someone who is alive?"
+<span class="counter">fruit: faith</span></div><div class="mys"><span class="title">2. the ascension</span>
+<a href="https://www.biblegateway.com/passage/?search=Mark+16%3A19&amp;version=NLT" target="_blank">Mark 16:19</a>
+<span class="counter" id="v19">19</span> when the Lord Jesus had finished talking with them, He was taken up into Heaven and sat down in the place of honor at God's right hand.
+<span class="counter">fruit: hope</span></div><div class="mys"><span class="title">3. the descent of the Holy Spirit</span>
+<a href="post.html?p=bible/acts_2-1-4.txt">Acts 2:1-4</a>
+<span class="counter" id="v1">1</span> on the day of Pentecost all the believers were meeting together in one place.
+<span class="counter" id="v2">2</span> suddenly, there was a sound from Heaven like the roaring of a mighty windstorm, and it filled the house where they were sitting.
+<span class="counter" id="v3">3</span> then, what looked like flames or tongues of fire appeared and settled on each of them.
+<span class="counter" id="v4">4</span> and everyone present was filled with the Holy Spirit and began speaking in other languages, as the Holy Spirit gave them this ability.
+<span class="counter">fruit: wisdom</span></div><div class="mys"><span class="title">4. the assumption</span>
+<a href="https://www.biblegateway.com/passage/?search=Luke+1%3A48-49&amp;version=NLT" target="_blank">Luke 1:48-49</a>
+<span class="counter" id="v48">48</span> for He took notice of His lowly servant girl,
+and from now on all generations will call me blessed.
+<span class="counter" id="v49">49</span> for the Mighty One is holy,
+and He has done great things for me.
+<span class="counter">fruit: devotion to Mary</span></div><div class="mys"><span class="title">5. the coronation of Mary, queen of Heaven and earth</span>
+<a href="https://www.biblegateway.com/passage/?search=Revelation+12%3A1&amp;version=NLT" target="_blank">Revelation 12:1</a>
+<span class="counter" id="v1">1</span> then I witnessed in Heaven an event of great significance.
+I saw a woman clothed with the sun, with the moon beneath her feet, and a crown of twelve stars on her head.
+<span class="counter">fruit: grace of a happy death</span></div></div></details>
+<span class="counter">the italian version of this page also has other ways of praying the mysteries (with texts from Padre Pio, and from a TV2000 broadcast) and the rosary to saint Rita of Cascia: <a href="https://ivana-rep.github.io/soul-it/the-rosary.html" target="_blank">in italian</a></span>
+
+→ why Mary
+
+the hail Mary is made of Scripture. its first half joins two greetings from Luke's Gospel: the angel Gabriel's, "greetings, favored woman! the Lord is with you!" (Luke 1:28), and Elizabeth's, "God has blessed you above all women, and your child is blessed" (Luke 1:42). the angel is only a messenger, so the first greeting is really God's. the second half asks Mary to pray for us. she isn't the end point: the name at the center of the prayer is Jesus, and every scene of the rosary is a scene from His life.
+
+→ the prayers
+
+↳ sign of the cross
+in the name of the Father, and of the Son, and of the Holy Spirit. amen.
+
+↳ apostles' creed
+i believe in God the Father almighty, creator of Heaven and earth.
+and in Jesus Christ, His only Son, our Lord, Who was conceived by the Holy Spirit, born of the virgin Mary, suffered under Pontius Pilate, was crucified, died, and was buried.
+He descended into hell; the third day He rose again from the dead; He ascended into Heaven, and sits at the right hand of God the Father almighty, from thence He shall come to judge the living and the dead.
+i believe in the Holy Spirit, the holy catholic church, the communion of saints, the forgiveness of sins, the resurrection of the body and life everlasting. amen.
+
+↳ our father
+our Father, Who art in Heaven, hallowed be Thy name.
+Thy Kingdom come. Thy will be done on earth, as it is in Heaven.
+give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us, and lead us not into temptation, but deliver us from evil. amen.
+
+↳ hail Mary
+hail, Mary, full of grace, the Lord is with thee.
+blessed art thou among women, and blessed is the fruit of thy womb, Jesus.
+holy Mary, mother of God, pray for us sinners, now and at the hour of our death. amen.
+
+↳ glory be
+glory be to the Father and to the Son and to the Holy Spirit, as it was in the beginning is now, and ever shall be, world without end. amen.
+
+↳ Fatima prayer
+o my Jesus, forgive us our sins, save us from the fires of hell; lead all souls to Heaven, especially those who have most need of Your mercy.
+
+↳ hail holy queen
+hail, holy queen, mother of mercy, our life, our sweetness and our hope.
+to you do we cry, poor banished children of Eve.
+to you do we send up our sighs, mourning and weeping in this valley of tears.
+turn then, most gracious advocate, your eyes of mercy toward us, and after this exile show unto us the blessed fruit of thy womb, Jesus.
+o clement, o loving, o sweet virgin Mary.
+
+↳ closing prayer
+v. pray for us, o holy mother of God.
+r. that we may be made worthy of the promises of Christ.
+let us pray. o God, Whose only-begotten Son, by His life, death and resurrection, has purchased for us the rewards of eternal life, grant, we beseech Thee, that meditating on these mysteries of the most holy rosary of the blessed virgin Mary, we may imitate what they contain and obtain what they promise, through the same Christ our Lord. amen.
+
+<span class="counter">↳ source: <a href="https://www.vatican.va/content/john-paul-ii/en/apost_letters/2002/documents/hf_jp-ii_apl_20021016_rosarium-virginis-mariae.html" target="_blank">rosarium virginis mariae</a></span>
+<span class="counter">↳ source: <a href="https://www.usccb.org/how-to-pray-the-rosary" target="_blank">usccb, how to pray the rosary</a></span>
+<span class="counter">↳ source: <a href="https://www.vatican.va/archive/compendium_ccc/documents/archive_2005_compendium-ccc_en.html" target="_blank">compendium of the catechism, common prayers</a></span>
+</pre>
+<script>
+  (function () {
+    var d = {0:"glorious",1:"joyful",2:"sorrowful",3:"glorious",4:"luminous",5:"sorrowful",6:"joyful"}[new Date().getDay()];
+    var s = document.querySelector('details[data-set="' + d + '"]');
+    if (s) { s.querySelector('.today').textContent = ' (today)'; }
+  })();
+</script>
+  </body>
+</html>
