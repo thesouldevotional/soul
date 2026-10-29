@@ -1,8 +1,8 @@
 # soul
 
-A personal, static devotional site — bible verses, prayers, saint biographies, and short "commonplace" quotes, some with a short personal reflection. Its Italian sibling, [`soul-it`](https://github.com/ivana-rep/soul-it), mirrors every page. Built as plain HTML + `.txt` content files, no build step, no framework, no database. Live at:
+A personal, static devotional site — bible verses, prayers, saint biographies, and short "commonplace" quotes, some with a short personal reflection. Its Italian sibling, [`soul-it`](https://github.com/thesouldevotional/soul-it), mirrors every page. Built as plain HTML + `.txt` content files, no build step, no framework, no database. Live at:
 
-**https://ivana-rep.github.io/soul/**
+**https://thesouldevotional.github.io/soul/**
 
 ## How it's built
 

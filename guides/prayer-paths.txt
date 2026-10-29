@@ -1,7 +1,7 @@
 guide | prayer paths
 ↳ [back to index](index.html)
 ↳ [back to archive](archive.html)
-↳ en // [it](https://ivana-rep.github.io/soul-it/post.html?p=guides/percorsi-di-preghiera.txt)
+↳ en // [it](https://thesouldevotional.github.io/soul-it/post.html?p=guides/percorsi-di-preghiera.txt)
 
 → daily prayers
     ↳ [morning](post.html?p=prayers/morning-prayer.txt)
