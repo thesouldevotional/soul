@@ -109,6 +109,7 @@ c. 1506 | sent as a page to the household of Juan Velázquez de Cuéllar, chief 
 ↳ prayer: [evening prayer](post.html?p=prayers/evening-prayer.txt) *
 ↳ prayer: [i belong entirely to You](post.html?p=prayers/i-belong-entirely-to-you.txt)
 ↳ prayer: [not my will, but Yours](post.html?p=prayers/not-my-will-but-yours.txt) *
+↳ prayer: [search me, know me](post.html?p=prayers/search-me-know-me.txt)
 ↳ commonplace: [salvation is synergy](post.html?p=commonplace/salvation-is-synergy.txt)
 ↳ commonplace: [knowing, wanting, doing, discerning the good](post.html?p=commonplace/knowing-wanting-doing-discerning-the-good.txt)
 ↳ commonplace: [content with what God disposes](post.html?p=commonplace/content-with-what-god-disposes.txt)

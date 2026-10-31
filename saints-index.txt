@@ -45,7 +45,7 @@ capsules: 2026-06-09 Enough | 2026-05-12 Subtraction | 2026-03-31 Form, not cons
 ignatius-of-loyola | Ignatius of Loyola | feast: July 31
 themes: examen, Spiritual Exercises, discernment of spirits (consolation/desolation), indifference & Principle and Foundation, Suscipe / surrender, scruples, imaginative prayer, finding God in all things, soldier turned pilgrim, legacy (Society of Jesus, Jesuit schools, patron of retreats, Pope Francis)
 verses: Isaiah 43:7 (made for My glory) | Psalms 139:23-24 (search my heart) | 1 Thessalonians 5:16-18 (always be joyful) | 1 Corinthians 9:24-27 (growing spiritually involves discipline) | Galatians 5:1-26 (we wait through the Spirit) | Ephesians 6:10-18 (armor of God)
-prayers: evening prayer | i belong entirely to You | not my will, but Yours
+prayers: evening prayer | i belong entirely to You | not my will, but Yours | search me, know me
 commonplace: salvation is synergy | knowing, wanting, doing, discerning the good | content with what God disposes
 
 joseph | Joseph | feast: March 19 (also venerated May 1 as St. Joseph the Worker)
