@@ -10,7 +10,9 @@ There is no static site generator. The entire site is:
 
 - a handful of hand-written HTML pages (`index.html`, `archive.html`, `post.html`, etc.)
 - one `.txt` file per piece of content (a verse, a prayer, a saint bio, a quote)
-- a tiny client-side script in `post.html` that fetches a `.txt` file and renders it
+- `soul.css` and `soul.js`, shared by every page: the style (same look as the landing page https://thesouldevotional.github.io/, IBM Plex Mono for text, Newsreader for titles, pixel tiles in `assets/`) and the client-side renderer
+
+The list pages (`archive.html`, the `all-*-archive.html` pages, `saints.html`, `books-of-the-bible.html`) keep their entries as plain lines in a hidden `<pre id="data">` block; `soul.js` builds the visible page from it. Only that block is ever edited.
 
 When you open a content page, the URL looks like:
 
@@ -18,7 +20,7 @@ When you open a content page, the URL looks like:
 post.html?p=bible/isaiah_60-22.txt
 ```
 
-`post.html` reads the `p` query parameter, `fetch()`s that raw `.txt` file, and renders it into HTML in the browser using a small custom markup engine (see [Rendering engine](#rendering-engine-posthtml) below). There is no server-side templating — GitHub Pages just serves static files, and the `.txt` → HTML conversion happens entirely in the browser at view time.
+`post.html` reads the `p` query parameter, `fetch()`s that raw `.txt` file, and `soul.js` renders it into HTML in the browser using a small custom markup engine (see [Rendering engine](#rendering-engine-posthtml) below). There is no server-side templating — GitHub Pages just serves static files, and the `.txt` → HTML conversion happens entirely in the browser at view time.
 
 This means **adding new content is just adding a new `.txt` file** (plus updating a couple of index pages that link to it) — no rebuild, no deploy pipeline beyond a plain `git push`.
 
@@ -35,14 +37,16 @@ The whole repo root is uploaded as-is (no build step) — whatever is on `main` 
 ## Repo structure
 
 ```
-index.html                    homepage — title "soul" + description, links to the archives
+index.html                    homepage — intro, search (by word and by meaning), tiles to the archives, guides
+soul.css / soul.js            shared style and renderer for every page
+assets/                       pixel tiles, hero and avatar (same as the landing page)
 post.html                     single-post viewer — renders any .txt file passed via ?p=
-archive.html                  ALL verses + prayers in one page, with two anchor-based indexes
+archive.html                  ALL verses + prayers in one page, with a book menu and a topic menu
 all-prayers-archive.html      flat list of every prayer, newest first (drives the prayers "read another one" loop)
 all-verses-archive.html       flat list of every verse, newest first (drives the verses "read another one" loop)
 all-commonplace-archive.html  flat list of every commonplace entry, newest first (drives its own loop)
 saints.html                   list of every saint, linking to their individual page
-topics.html                   topic index — generated at load time from archive.html's topic sections
+topics.html                   redirect to archive.html (the topic index moved into the archive's topic menu)
 books-of-the-bible.html       every book with an explainer, grouped in ten canonical sections
 path-for-the-skeptical.html   a six-question path through scripture
 saints-index.txt              internal-only lookup index of saint connections (see below)
@@ -102,10 +106,7 @@ The loop order for each type is tracked by its flat "all" page (`all-verses-arch
 
 ## Archive & topic system
 
-`archive.html` is the single hub page for all verses and prayers. It has two anchor-based indexes at the top:
-
-- **`↳ author / book`** — jumps to a section per bible book (verses only, grouped and ordered biblically)
-- **`↳ topic`** — links to `topics.html`, an alphabetical index of every topic section, shared between verses and prayers (a topic can hold verses only, prayers only, or both, split into `// verses` / `// prayers` sub-sections)
+`archive.html` is the single hub page for all verses and prayers. By default it shows everything; two menus at the top pick a single book (verses only, ordered biblically) or a single topic (shared between verses and prayers, split into `verses` / `prayers` sub-sections). Links to `archive.html#{slug}` or `#{topic}-verses` / `#{topic}-prayers` open the archive with that book or topic already selected.
 
 Topics come from the topical index of the Life Application Study Bible whenever it covers the passage, so a longer passage can sit under several topics; otherwise an existing topic is picked by hand. Commonplace entries opt out of this system entirely — their only presence on `archive.html` is the `↳ all commonplace` link to their flat list.
 
@@ -128,7 +129,7 @@ Topics come from the topical index of the Life Application Study Bible whenever 
 | `[text](url)` | link |
 | everything else | plain line |
 
-Empty lines are preserved (the content sits in a `<pre>`), and the whole thing is theme-aware (light/dark via `prefers-color-scheme`).
+Line breaks and empty lines are preserved. `→ also in` gospel parallels and the verses at the end of the daily prayers are collapsible boxes; `→ ` / `  → ` lines in guides are headings; trailing ` *` / ` ✎` / ` ☆` markers show as ¶ ✎ ☆. The page follows the system light/dark theme, and a button switches it (remembered per browser).
 
 ## Style rules (content)
 

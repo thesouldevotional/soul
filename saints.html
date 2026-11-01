@@ -1,104 +1,29 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>soul — saints</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="light dark">
-    <link rel="icon" type="image/png" href="/soul/soulfavicon.png" media="(prefers-color-scheme: light)">
-    <link rel="icon" type="image/png" href="/soul/soulfavicon_dark.png" media="(prefers-color-scheme: dark)">
-    <link rel="apple-touch-icon" sizes="180x180" href="/soul/apple-touch-icon.png">
+<head>
+  <meta charset="utf-8">
+  <title>soul · saints</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" type="image/png" href="/soul/soulfavicon.png" media="(prefers-color-scheme: light)">
+  <link rel="icon" type="image/png" href="/soul/soulfavicon_dark.png" media="(prefers-color-scheme: dark)">
+  <link rel="apple-touch-icon" sizes="180x180" href="/soul/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="soul.css">
+  <script src="soul.js"></script>
+</head>
+<body>
+<main class="card" id="card">
+<div class="banner p-night"><span class="tag">saints</span></div>
+<nav class="nav"><a class="chip" href="index.html">index</a><a class="chip" href="archive.html">archive</a><a class="chip ghost" href="https://thesouldevotional.github.io/soul-it/saints.html">it</a></nav>
+<div class="ref">the saints i keep close</div>
+<h1 class="title">saints</h1>
+</main>
 
-    <style>
-      :root {
-        --bg: #ffffff;
-        --fg: #111111;
-        --link: #005bff;
-
-        --mark-light: rgba(255, 241, 118, 0.9);
-        --mark-dark: rgba(255, 235, 59, 0.9);
-      }
-
-      @media (prefers-color-scheme: dark) {
-        :root {
-          --bg: #000000;
-          --fg: #ffffff;
-          --link: #8fc9ed;
-        }
-      }
-
-      html, body { height: 100%; }
-      html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
-
-      body {
-        margin: 0;
-        background: var(--bg);
-        color: var(--fg);
-        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
-        line-height: 1.35;
-        -webkit-font-smoothing: antialiased;
-        padding: 16px;
-      }
-
-      @media (hover: hover) and (pointer: fine) {
-        body {
-          font-size: 12.6px;
-        }
-      }
-
-      a, a:visited {
-        color: var(--link);
-        text-decoration: none;
-      }
-
-      a:hover { text-decoration: underline; }
-
-      pre {
-        margin: 0;
-        white-space: pre-wrap;
-        word-wrap: break-word;
-      }
-
-      mark {
-        background: none;
-        color: inherit;
-        padding: 0 2px;
-        background-image: linear-gradient(
-          transparent 62%,
-          var(--mark-light) 62%
-        );
-      }
-
-      @media (prefers-color-scheme: dark) {
-        mark {
-          background: none;
-          padding: 0;
-          color: var(--fg);
-          text-decoration: underline;
-          text-decoration-thickness: 2px;
-          text-underline-offset: 0.15em;
-          text-decoration-color: var(--mark-dark);
-        }
-      }
-
-      .counter {
-        color: #767676;
-        font-size: 0.8em;
-      }
-
-      @media (prefers-color-scheme: dark) {
-        .counter {
-          color: #999;
-        }
-      }
-    </style>
-  </head>
-
-  <body>
-<pre>
-<mark>soul</mark> | <a href="index.html">index</a> | <a href="archive.html">archive</a>
+<pre id="data" hidden>
 ↳ en // <a href="https://thesouldevotional.github.io/soul-it/saints.html">it</a>
-
 <span id="anthony-of-padua"></span>↳ <a href="post.html?p=saints/anthony-of-padua.txt">Anthony of Padua</a>
 <span id="augustine-of-hippo"></span>↳ <a href="post.html?p=saints/augustine-of-hippo.txt">Augustine of Hippo</a>
 <span id="clare-of-assisi"></span>↳ <a href="post.html?p=saints/clare-of-assisi.txt">Clare of Assisi</a>
@@ -109,8 +34,8 @@
 <span id="michael-the-archangel"></span>↳ <a href="post.html?p=saints/michael-the-archangel.txt">Michael the Archangel</a>
 <span id="pio-of-pietrelcina"></span>↳ <a href="post.html?p=saints/pio-of-pietrelcina.txt">Pio of Pietrelcina</a>
 <span id="thomas-aquinas"></span>↳ <a href="post.html?p=saints/thomas-aquinas.txt">Thomas Aquinas</a>
-
-<span class="counter">// <a href="index.html#search-input">search all archives by keyword</a></span>
 </pre>
-  </body>
+
+<script>Soul.simpleList();</script>
+</body>
 </html>

@@ -4,14 +4,15 @@ guide | prayer paths
 ↳ en // [it](https://thesouldevotional.github.io/soul-it/post.html?p=guides/percorsi-di-preghiera.txt)
 
 → daily prayers
-    ↳ [morning](post.html?p=prayers/morning-prayer.txt)
-    ↳ [midday (working days)](post.html?p=prayers/midday-prayer-working-days.txt)
-    ↳ [midday (rest days)](post.html?p=prayers/midday-prayer-rest-days.txt)
-    ↳ [evening prayer](post.html?p=prayers/evening-prayer.txt)
-→ if you want to fast
+    ↳ [morning](post.html?p=prayers/morning-prayer.txt) ✎
+    ↳ [midday (working days)](post.html?p=prayers/midday-prayer-working-days.txt) ✎
+    ↳ [midday (rest days)](post.html?p=prayers/midday-prayer-rest-days.txt) ✎
+    ↳ [evening prayer](post.html?p=prayers/evening-prayer.txt) ✎
+→ for specific moments
+  → if you want to fast
     ↳ [what fasting is and why it helps](post.html?p=guides/fasting.txt)
     ↳ [as i begin this fast](post.html?p=prayers/as-i-begin-this-fast.txt)
     ↳ [when the hunger comes](post.html?p=prayers/when-the-hunger-comes.txt)
     ↳ [breaking the fast](post.html?p=prayers/breaking-the-fast.txt)
-→ distracted mind
+  → distracted mind
     ↳ [gather my scattered mind](post.html?p=prayers/gather-my-scattered-mind.txt)

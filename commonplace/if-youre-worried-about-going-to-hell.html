@@ -1,151 +1,21 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>soul — if you're worried about going to hell</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="light dark">
-    <link rel="icon" type="image/png" href="/soul/soulfavicon.png" media="(prefers-color-scheme: light)">
-    <link rel="icon" type="image/png" href="/soul/soulfavicon_dark.png" media="(prefers-color-scheme: dark)">
-    <link rel="apple-touch-icon" sizes="180x180" href="/soul/apple-touch-icon.png">
-
-    <style>
-      :root {
-        --bg: #ffffff;
-        --fg: #111111;
-        --link: #005bff;
-
-        --mark-light: rgba(255, 241, 118, 0.9);
-        --mark-dark: rgba(255, 235, 59, 0.9);
-        --quote-fg: #555;
-      }
-
-      @media (prefers-color-scheme: dark) {
-        :root {
-          --bg: #000000;
-          --fg: #ffffff;
-          --link: #8fc9ed;
-          --quote-fg: #bbb;
-        }
-      }
-
-      html, body { height: 100%; }
-      html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
-
-      body {
-        margin: 0;
-        background: var(--bg);
-        color: var(--fg);
-        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
-        line-height: 1.35;
-        -webkit-font-smoothing: antialiased;
-        padding: 16px;
-        padding-bottom: 120px;
-      }
-
-      @media (hover: hover) and (pointer: fine) {
-        body {
-          font-size: 12.6px;
-        }
-      }
-
-      a, a:visited {
-        color: var(--link);
-        text-decoration: none;
-      }
-
-      a:hover { text-decoration: underline; }
-
-      pre {
-        margin: 0;
-        white-space: pre-wrap;
-        word-wrap: break-word;
-      }
-
-      mark {
-        background: none;
-        color: inherit;
-        padding: 0 2px;
-        background-image: linear-gradient(
-          transparent 62%,
-          var(--mark-light) 62%
-        );
-      }
-
-      @media (prefers-color-scheme: dark) {
-        mark {
-          background: none;
-          padding: 0;
-          color: var(--fg);
-          text-decoration: underline;
-          text-decoration-thickness: 2px;
-          text-underline-offset: 0.15em;
-          text-decoration-color: var(--mark-dark);
-        }
-      }
-
-      .quote {
-        color: var(--quote-fg);
-      }
-
-      .counter {
-        color: #767676;
-        font-size: 0.8em;
-      }
-
-      @media (prefers-color-scheme: dark) {
-        .counter {
-          color: #999;
-        }
-      }
-
-      main {
-        max-width: 900px;
-      }
-
-      .question {
-        margin: 40px 0;
-      }
-
-      .q-grid {
-        display: grid;
-        grid-template-columns: 1.2fr 1fr;
-        gap: 8px 28px;
-        align-items: start;
-      }
-
-      @media (max-width: 640px) {
-        .q-grid {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      .explain {
-        margin: 0;
-      }
-
-      .verses {
-        margin: 0;
-      }
-
-      .verse-item {
-        margin: 0 0 14px 0;
-      }
-
-      .verse-item:last-child {
-        margin-bottom: 0;
-      }
-
-      .verse-quote {
-        display: block;
-        color: var(--quote-fg);
-        font-size: 0.85em;
-        margin-top: 2px;
-      }
-    </style>
-  </head>
-
-  <body>
+<head>
+  <meta charset="utf-8">
+  <title>soul — if you're worried about going to hell</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" type="image/png" href="/soul/soulfavicon.png" media="(prefers-color-scheme: light)">
+  <link rel="icon" type="image/png" href="/soul/soulfavicon_dark.png" media="(prefers-color-scheme: dark)">
+  <link rel="apple-touch-icon" sizes="180x180" href="/soul/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../soul.css">
+  <script src="../soul.js"></script>
+</head>
+<body>
+<div id="legacy">
 <pre>
 if you're worried about going to hell
 ↳ <a href="../index.html">back to index</a>
@@ -212,5 +82,8 @@ pray to God today. am i saved? He'll answer.</pre>
 <pre style="margin-top: 24px;">> see <a href="../post.html?p=commonplace/why-did-jesus-have-to-die-for-me-to-be-forgiven.txt">another</a> one</pre>
 
 </main>
-  </body>
+  
+</div>
+<script>Soul.legacy({ label: 'commonplace', pal: 'fog', ref: 'commonplace' });</script>
+</body>
 </html>

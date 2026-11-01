@@ -1,153 +1,42 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>soul</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="light dark">
-    <link rel="icon" type="image/png" href="/soul/soulfavicon.png" media="(prefers-color-scheme: light)">
-    <link rel="icon" type="image/png" href="/soul/soulfavicon_dark.png" media="(prefers-color-scheme: dark)">
-    <link rel="apple-touch-icon" sizes="180x180" href="/soul/apple-touch-icon.png">
-
-    <style>
-      :root {
-        --bg: #ffffff;
-        --fg: #111111;
-        --link: #005bff;
-
-        --mark-light: rgba(255, 241, 118, 0.9);
-        --mark-dark: rgba(255, 235, 59, 0.9);
-      }
-
-      @media (prefers-color-scheme: dark) {
-        :root {
-          --bg: #000000;
-          --fg: #ffffff;
-          --link: #8fc9ed;
-        }
-      }
-
-      html, body { height: 100%; }
-      html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
-
-      body {
-        margin: 0;
-        background: var(--bg);
-        color: var(--fg);
-        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
-        line-height: 1.35;
-        -webkit-font-smoothing: antialiased;
-        padding: 16px;
-      }
-
-      @media (hover: hover) and (pointer: fine) {
-        body {
-          font-size: 12.6px;
-        }
-      }
-
-      a, a:visited {
-        color: var(--link);
-        text-decoration: none;
-      }
-
-      a:hover { text-decoration: underline; }
-
-      pre {
-        margin: 0;
-        white-space: pre-wrap;
-        word-wrap: break-word;
-      }
-
-      mark {
-        background: none;
-        color: inherit;
-        padding: 0 2px;
-        background-image: linear-gradient(
-          transparent 62%,
-          var(--mark-light) 62%
-        );
-      }
-
-      @media (prefers-color-scheme: dark) {
-        mark {
-          background: none;
-          padding: 0;
-          color: var(--fg);
-          text-decoration: underline;
-          text-decoration-thickness: 2px;
-          text-underline-offset: 0.15em;
-          text-decoration-color: var(--mark-dark);
-        }
-      }
-
-      .counter {
-        color: #767676;
-        font-size: 0.8em;
-      }
-
-      @media (prefers-color-scheme: dark) {
-        .counter {
-          color: #999;
-        }
-      }
-
-      #search-input,
-      #semantic-input {
-        font: inherit;
-        font-size: inherit;
-        color: var(--fg);
-        background: transparent;
-        border: none;
-        border-bottom: 1px solid var(--link);
-        outline: none;
-        width: 200px;
-      }
-
-      #search-input::placeholder,
-      #semantic-input::placeholder {
-        color: #767676;
-      }
-    </style>
-  </head>
-
-  <body>
-<pre>
-<mark>soul</mark>
-↳ en // <a href="https://thesouldevotional.github.io/soul-it/">it</a>
-
-// digital devotional journal
-
-→ <a href="archive.html">bible verses and prayers</a>, browse by:
-    ↳ <a href="archive.html#by-author">author/book</a>
-    ↳ <a href="topics.html">topic</a>
-    ↳ <a href="all-prayers-archive.html">read all prayers</a>
-→ <a href="saints.html">saints</a>
-→ <a href="all-commonplace-archive.html">commonplace</a> (quotes on spirituality and religion)
-→ guides
-    ↳ <a href="post.html?p=guides/how-to-read-the-bible.txt">how to read the bible</a>, a suggested reading order through scripture
-    ↳ <a href="post.html?p=guides/prayer-paths.txt">prayer paths</a>
-    ↳ <a href="post.html?p=guides/fasting.txt">fasting</a>, what it is, why it helps, where scripture talks about it
-    ↳ <a href="the-rosary.html">the rosary</a>, how to pray it step by step, with all the mysteries
-    ↳ <a href="path-for-the-skeptical.html">a path for the skeptical</a>, six questions for anyone who isn't sure yet
-
-
-↳ search: <input type="text" id="search-input" placeholder="keyword" autocomplete="off" spellcheck="false"> <span class="counter" id="search-status"></span> <span class="counter" id="search-clear" style="display:none">// <a href="#" id="search-clear-link">clear results</a></span>
-<span id="search-results"></span>
-
-↳ search by meaning: <input type="text" id="semantic-input" placeholder="e.g. jesus explaining how to pray" autocomplete="off" spellcheck="false"> <span class="counter" id="semantic-status"></span> <span class="counter" id="semantic-clear" style="display:none">// <a href="#" id="semantic-clear-link">clear results</a></span>
-<span id="semantic-results"></span>
-
-<span class="counter">↳ content</span>
-<span class="counter">// verses <span id="count-verses">…</span></span>
-<span class="counter">// prayers <span id="count-prayers">…</span></span>
-<span class="counter">// commonplace <span id="count-commonplace">…</span></span>
-<span class="counter">// saints <span id="count-saints">…</span></span>
-
-↳ contact: <a href="https://t.me/ivana_tg">telegram</a>
-↳ other projects: <a href="https://ivana-rep.github.io/thoughtcapsules/">thinking capsules</a>
-</pre>
-
+<head>
+  <meta charset="utf-8">
+  <title>soul</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" type="image/png" href="/soul/soulfavicon.png" media="(prefers-color-scheme: light)">
+  <link rel="icon" type="image/png" href="/soul/soulfavicon_dark.png" media="(prefers-color-scheme: dark)">
+  <link rel="apple-touch-icon" sizes="180x180" href="/soul/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="soul.css">
+  <script src="soul.js"></script>
+</head>
+<body>
+<main class="card home" id="card">
+<div class="intro">
+<img class="avatar" src="assets/avatar.png" alt="a dove" width="88" height="88">
+<h1 class="name">soul</h1>
+<p class="bio">// a digital devotional journal<br>// Bible verses, prayers and what they mean to me</p>
+<div class="socials"><a class="chip" href="https://www.instagram.com/thesouldevotional/" target="_blank" rel="noopener">instagram</a><a class="chip" href="https://www.tiktok.com/@thesouldevotional" target="_blank" rel="noopener">tiktok</a><a class="chip" href="https://t.me/ivana_tg" target="_blank" rel="noopener">telegram</a><a class="chip ghost" href="https://thesouldevotional.github.io/soul-it/">it</a></div>
+<div class="search">
+<input type="text" id="search-input" placeholder="search a word" autocomplete="off" spellcheck="false">
+<div class="results"><div class="status"><span id="search-status"></span><span id="search-clear" style="display:none"><a href="#" id="search-clear-link">clear</a></span></div><div id="search-results"></div></div>
+<input type="text" id="semantic-input" placeholder="search by meaning" autocomplete="off" spellcheck="false">
+<div class="results"><div class="status"><span id="semantic-status"></span><span id="semantic-clear" style="display:none"><a href="#" id="semantic-clear-link">clear</a></span></div><div id="semantic-results"></div></div>
+</div>
+<a class="tile tile-who p-rods" href="https://ivana-dicarlo.pages.dev/" target="_blank" rel="noopener"><span class="badge" aria-hidden="true">↗</span><span class="tag">who writes here: Ivana</span></a>
+<div class="other">other projects: <a href="https://ivana-rep.github.io/thoughtcapsules/">thinking capsules</a></div>
+</div>
+<div class="main">
+<div class="glabel">read</div>
+<div class="grid"><a class="tile tile-hero p-hero" href="archive.html"><span class="badge" aria-hidden="true">↗</span><span class="tag">bible verses and prayers</span></a><a class="tile p-dawn" href="all-verses-archive.html"><span class="badge" aria-hidden="true">↗</span><span class="tag">all verses<span class="count" id="count-verses"></span></span></a><a class="tile p-plum" href="all-prayers-archive.html"><span class="badge" aria-hidden="true">↗</span><span class="tag">all prayers<span class="count" id="count-prayers"></span></span></a><a class="tile p-night" href="saints.html"><span class="badge" aria-hidden="true">↗</span><span class="tag">saints<span class="count" id="count-saints"></span></span></a><a class="tile p-fog" href="all-commonplace-archive.html"><span class="badge" aria-hidden="true">↗</span><span class="tag">commonplace<span class="count" id="count-commonplace"></span></span></a><a class="tile p-rods" href="books-of-the-bible.html"><span class="badge" aria-hidden="true">↗</span><span class="tag">books of the bible</span></a></div>
+<div class="glabel">guides</div>
+<div class="guides"><a class="grow" href="path-for-the-skeptical.html"><span class="gname">a path for the skeptical</span><span class="gdesc">six questions for anyone who isn't sure yet</span></a><a class="grow" href="post.html?p=guides/how-to-read-the-bible.txt"><span class="gname">how to read the bible</span><span class="gdesc">a suggested reading order through scripture</span></a><a class="grow" href="post.html?p=guides/prayer-paths.txt"><span class="gname">prayer paths</span><span class="gdesc">prayers to follow through the day and in specific moments</span></a><a class="grow" href="post.html?p=guides/fasting.txt"><span class="gname">fasting</span><span class="gdesc">what it is, why it helps, where scripture talks about it</span></a><a class="grow" href="the-rosary.html"><span class="gname">the rosary</span><span class="gdesc">how to pray it step by step, with all the mysteries</span></a></div>
+</div>
+</main>
 <script>
 (function () {
   const input = document.getElementById("search-input");
@@ -248,11 +137,9 @@
 
       results.innerHTML = matches
         .map(e => {
-          const line1 = `↳ <a href="post.html?p=${e.path}">${escapeHTML(e.title)}</a><span class="counter"> // ${typeLabel(e.path)}</span>`;
-          const line2 = `<span class="counter">   ${snippet(e.text, query)}</span>`;
-          return line1 + "\n" + line2;
+          return `<div class="lrow"><a href="post.html?p=${e.path}">${escapeHTML(e.title)}</a> <span class="count">// ${typeLabel(e.path)}</span><span class="snip">${snippet(e.text, query)}</span></div>`;
         })
-        .join("\n\n") + "\n";
+        .join("");
     });
   }
 
@@ -454,11 +341,9 @@ self.onmessage = async (e) => {
 
     semResults.innerHTML = scored
       .map(({ e }) => {
-        const line1 = `↳ <a href="post.html?p=${e.path}">${escapeHTML(e.title)}</a><span class="counter"> // ${typeLabel(e.path)}</span>`;
-        const line2 = `<span class="counter">   ${semSnippet(e.text)}</span>`;
-        return line1 + "\n" + line2;
+        return `<div class="lrow"><a href="post.html?p=${e.path}">${escapeHTML(e.title)}</a> <span class="count">// ${typeLabel(e.path)}</span><span class="snip">${semSnippet(e.text)}</span></div>`;
       })
-      .join("\n\n") + "\n";
+      .join("");
   }
 
   semInput.addEventListener("input", () => {
@@ -501,7 +386,7 @@ self.onmessage = async (e) => {
     fetch(page)
       .then(r => r.text())
       .then(html => {
-        document.getElementById(elId).textContent = "[" + countLinks(html, prefix) + "]";
+        document.getElementById(elId).textContent = String(countLinks(html, prefix));
       })
       .catch(() => {
         document.getElementById(elId).textContent = "";
@@ -514,6 +399,6 @@ self.onmessage = async (e) => {
   loadCount("saints.html", "saints", "count-saints");
 })();
 </script>
-
-  </body>
+<script>Soul.finish(document.getElementById('card'));</script>
+</body>
 </html>

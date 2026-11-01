@@ -1,167 +1,21 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>soul — the rosary</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="light dark">
-    <link rel="icon" type="image/png" href="/soul/soulfavicon.png" media="(prefers-color-scheme: light)">
-    <link rel="icon" type="image/png" href="/soul/soulfavicon_dark.png" media="(prefers-color-scheme: dark)">
-    <link rel="apple-touch-icon" sizes="180x180" href="/soul/apple-touch-icon.png">
-
-    <style>
-      :root {
-        --bg: #ffffff;
-        --fg: #111111;
-        --link: #005bff;
-
-        --mark-light: rgba(255, 241, 118, 0.9);
-        --mark-dark: rgba(255, 235, 59, 0.9);
-        --quote-fg: #555;
-      }
-
-      @media (prefers-color-scheme: dark) {
-        :root {
-          --bg: #000000;
-          --fg: #ffffff;
-          --link: #8fc9ed;
-          --quote-fg: #bbb;
-        }
-      }
-
-      html, body { height: 100%; }
-      html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
-
-      body {
-        margin: 0;
-        background: var(--bg);
-        color: var(--fg);
-        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
-        line-height: 1.35;
-        -webkit-font-smoothing: antialiased;
-        padding: 16px;
-        padding-bottom: 120px;
-      }
-
-      @media (hover: hover) and (pointer: fine) {
-        body {
-          font-size: 12.6px;
-        }
-      }
-
-      a, a:visited {
-        color: var(--link);
-        text-decoration: none;
-      }
-
-      a:hover { text-decoration: underline; }
-
-      pre {
-        margin: 0;
-        white-space: pre-wrap;
-        word-wrap: break-word;
-      }
-
-      mark {
-        background: none;
-        color: inherit;
-        padding: 0 2px;
-        background-image: linear-gradient(
-          transparent 62%,
-          var(--mark-light) 62%
-        );
-      }
-
-      @media (prefers-color-scheme: dark) {
-        mark {
-          background: none;
-          padding: 0;
-          color: var(--fg);
-          text-decoration: underline;
-          text-decoration-thickness: 2px;
-          text-underline-offset: 0.15em;
-          text-decoration-color: var(--mark-dark);
-        }
-      }
-
-      .quote {
-        color: var(--quote-fg);
-      }
-
-      .counter {
-        color: #767676;
-        font-size: 0.8em;
-      }
-
-      @media (prefers-color-scheme: dark) {
-        .counter {
-          color: #999;
-        }
-      }
-
-      main {
-        max-width: 900px;
-      }
-
-      .question {
-        margin: 48px 0;
-      }
-
-      .question-title {
-        margin: 0 0 10px 0;
-      }
-
-      .q-grid {
-        display: grid;
-        grid-template-columns: 1.2fr 1fr;
-        gap: 8px 28px;
-        align-items: start;
-      }
-
-      @media (max-width: 640px) {
-        .q-grid {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      .explain {
-        margin: 0;
-      }
-
-      .verses {
-        margin: 0;
-      }
-
-      .verse-item {
-        margin: 0 0 14px 0;
-      }
-
-      .verse-item:last-child {
-        margin-bottom: 0;
-      }
-
-      .verse-quote {
-        display: block;
-        color: var(--quote-fg);
-        font-size: 0.85em;
-        margin-top: 2px;
-      }
-    
-      details { margin: 0; }
-      summary { cursor: pointer; list-style: none; color: var(--link); }
-      summary::-webkit-details-marker { display: none; }
-      summary::before { content: "+ "; }
-      details[open] > summary::before { content: "- "; }
-      .set > .body { padding: 6px 0 14px 2ch; }
-      .mys { margin: 10px 0 18px; }
-      .mys .title { font-weight: bold; }
-      .alt { margin: 6px 0 0 2ch; }
-      .alt > .body { padding: 4px 0 8px 2ch; color: var(--quote-fg); }
-      .today { color: var(--quote-fg); }
-    </style>
-  </head>
-
-  <body>
+<head>
+  <meta charset="utf-8">
+  <title>soul — the rosary</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" type="image/png" href="/soul/soulfavicon.png" media="(prefers-color-scheme: light)">
+  <link rel="icon" type="image/png" href="/soul/soulfavicon_dark.png" media="(prefers-color-scheme: dark)">
+  <link rel="apple-touch-icon" sizes="180x180" href="/soul/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="soul.css">
+  <script src="soul.js"></script>
+</head>
+<body>
+<div id="legacy">
 <pre>
 guide | the rosary
 ↳ <a href="index.html">back to index</a>
@@ -175,19 +29,18 @@ you don't need to know much to start.
 
 ten hail Marys in a row can sound boring. John Paul II answers with an image from love: people in love say "i love you" over and over, and it's never quite the same twice, because the feeling behind it is alive. the words stay the same so the heart doesn't have to look for new ones, and can stay on Him.
 
-but doesn't Jesus warn against repeating words? in Matthew 6:7 He says: "when you pray, don't babble on and on as the Gentiles do. they think their prayers are answered merely by repeating their words again and again." what He criticizes is empty words, piled up to wear God down. He doesn't forbid repetition: in Gethsemane He prayed a third time, "saying the same things again" (Matthew 26:44). Psalm 136 repeats "His faithful love endures forever" twenty-six times, and in Revelation 4:8 the living beings keep saying "holy, holy, holy" day after day and night after night. the Catechism (2668) says that a name repeated "by a humbly attentive heart" is not "heaping up empty phrases". the rosary becomes vain repetition only when the heart is somewhere else.
+but doesn't Jesus warn against repeating words? in <a href="https://thesouldevotional.github.io/soul/post.html?p=bible/matthew_6-1-18.txt#v7">Matthew 6:7</a> He says: "when you pray, don't babble on and on as the Gentiles do. they think their prayers are answered merely by repeating their words again and again." what He criticizes is empty words, piled up to wear God down. He doesn't forbid repetition: in Gethsemane He prayed a third time, "saying the same things again" (<a href="https://thesouldevotional.github.io/soul/post.html?p=bible/matthew_26-36-46.txt#v44">Matthew 26:44</a>). <a href="https://www.biblegateway.com/passage/?search=Psalm+136&version=NLT" target="_blank">Psalm 136</a> repeats "His faithful love endures forever" twenty-six times, and in <a href="https://www.biblegateway.com/passage/?search=Revelation+4%3A8&version=NLT" target="_blank">Revelation 4:8</a> the living beings keep saying "holy, holy, holy" day after day and night after night. the Catechism (2668) says that a name repeated "by a humbly attentive heart" is not "heaping up empty phrases". the rosary becomes vain repetition only when the heart is somewhere else.
 
 → what you need
 
 a rosary. you can count on your fingers, but holding something helps: the beads keep your hands busy and tell you where you are, so you don't have to count.
 
-how the beads are laid out:
-crucifix         sign of the cross, creed
-1 large bead     our father
-3 small beads    hail Mary
-then a loop of five decades, each one:
-1 large bead     our father
-10 small beads   hail Mary
+a rosary has two parts:
+* a short strand hanging from the loop: the crucifix, 1 large bead, 3 small beads. this is where you start.
+  ✝ ● ○ ○ ○
+* the loop: five decades, one after the other. a decade is 1 large bead and 10 small ones.
+  ● ○ ○ ○ ○ ○ ○ ○ ○ ○ ○
+on the large beads you say an our father, on the small ones a hail Mary.
 
 the beads all lead back to the crucifix, where the prayer starts and ends. John Paul II reads this as a picture of the Christian life: everything starts from Christ and leads back to Him.
 
@@ -199,11 +52,11 @@ the beads all lead back to the crucifix, where the prayer starts and ends. John 
 4. on each of the next three beads, say a hail Mary.
 5. say a glory be.
 6. then, for each of the five decades:
-   announce the mystery and read its passage (below)
-   an our father on the large bead
-   a hail Mary on each of the ten small beads
-   a glory be
-   the Fatima prayer, if you want
+   ⭢ announce the mystery and read its passage (below)
+   ⭢ an our father on the large bead
+   ⭢ a hail Mary on each of the ten small beads
+   ⭢ a glory be
+   ⭢ the Fatima prayer, if you want
 7. after the fifth decade, say the hail holy queen and the closing prayer, then make the sign of the cross.
 
 → each decade, slowly
@@ -218,10 +71,10 @@ the steps above are only the frame. the praying happens inside each decade, and 
 
 → the mysteries and their days
 
-monday, saturday     joyful
-tuesday, friday      sorrowful
-wednesday, sunday    glorious
-thursday             luminous
+⭢ monday, saturday     joyful
+⭢ tuesday, friday      sorrowful
+⭢ wednesday, sunday    glorious
+⭢ thursday             luminous
 
 on the Sundays of Advent many pray the joyful mysteries, and on the Sundays of Lent the sorrowful ones. today's set is marked below. each mystery has a short passage from Scripture (the ones suggested by the US bishops) and the grace to ask for.
 
@@ -370,7 +223,11 @@ I saw a woman clothed with the sun, with the moon beneath her feet, and a crown 
 
 → why Mary
 
-the hail Mary is made of Scripture. its first half joins two greetings from Luke's Gospel: the angel Gabriel's, "greetings, favored woman! the Lord is with you!" (Luke 1:28), and Elizabeth's, "God has blessed you above all women, and your child is blessed" (Luke 1:42). the angel is only a messenger, so the first greeting is really God's. the second half asks Mary to pray for us. she isn't the end point: the name at the center of the prayer is Jesus, and every scene of the rosary is a scene from His life.
+the rosary is about Jesus, not about Mary. the hail Mary is made almost entirely of Scripture:
+* "hail, Mary, full of grace, the Lord is with thee" is the angel Gabriel's greeting (<a href="https://www.biblegateway.com/passage/?search=Luke+1%3A28&version=NLT" target="_blank">Luke 1:28</a>). the angel only brings God's message, so it's God who greets her first.
+* "blessed art thou among women, and blessed is the fruit of thy womb" is what Elizabeth says to her (<a href="https://www.biblegateway.com/passage/?search=Luke+1%3A42&version=NLT" target="_blank">Luke 1:42</a>).
+* "holy Mary, mother of God, pray for us sinners" is the part that isn't taken from the Bible: we ask her to pray for us, the way you'd ask a friend.
+she isn't where the prayer ends. the name at its center is Jesus, and every scene of the rosary is a scene from His life.
 
 → the prayers
 
@@ -415,12 +272,14 @@ let us pray. o God, Whose only-begotten Son, by His life, death and resurrection
 <span class="counter">↳ source: <a href="https://www.usccb.org/how-to-pray-the-rosary" target="_blank">usccb, how to pray the rosary</a></span>
 <span class="counter">↳ source: <a href="https://www.vatican.va/archive/compendium_ccc/documents/archive_2005_compendium-ccc_en.html" target="_blank">compendium of the catechism, common prayers</a></span>
 </pre>
+</div>
 <script>
   (function () {
     var d = {0:"glorious",1:"joyful",2:"sorrowful",3:"glorious",4:"luminous",5:"sorrowful",6:"joyful"}[new Date().getDay()];
     var s = document.querySelector('details[data-set="' + d + '"]');
-    if (s) { s.querySelector('.today').textContent = ' (today)'; }
+    if (s) { s.querySelector('.today').textContent = ' · today'; }
   })();
 </script>
-  </body>
+<script>Soul.legacy({ label: 'guide', pal: 'dawn', ref: 'guide' });</script>
+</body>
 </html>
