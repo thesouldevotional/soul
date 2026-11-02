@@ -137,14 +137,20 @@
     if (langIdx >= 0) nav.push(nav.splice(langIdx, 1)[0]);
 
     // split into body / parallels / reflection / footer lines
-    let body = [], par = [], refl = [], meta = [], next = '', mode = 'body', rc = 0;
+    let body = [], par = [], more = [], refl = [], meta = [], next = '', mode = 'body', rc = 0, moreLabel = '';
     for (const l of L) {
       if (/^> /.test(l)) { next = l; continue; }
       if (isVP) {
         if (l === '---') { rc++; mode = rc === 1 ? 'refl' : 'meta'; continue; }
         if (I.alsoIn.test(l) || /^→ (also in|presente anche in)/.test(l)) { mode = 'par'; continue; }
-        if (l.startsWith('~ ')) { if (mode === 'refl') refl.push(l); else { mode = 'meta'; meta.push(l.slice(2)); } continue; }
-        ({ body, par, refl, meta })[mode].push(l);
+        // "+ label" opens the rest of a long passage, collapsible; its ~ lines are section labels, not footer
+        if (/^\+ /.test(l)) { moreLabel = l.slice(2); mode = 'more'; continue; }
+        if (l.startsWith('~ ')) {
+          if (mode === 'refl' || (mode === 'more' && !l.startsWith('~ ↳'))) ({ refl, more })[mode].push(l);
+          else { mode = 'meta'; meta.push(l.slice(2)); }
+          continue;
+        }
+        ({ body, par, more, refl, meta })[mode].push(l);
       } else body.push(l);
     }
     if (!isVP) {
@@ -155,7 +161,7 @@
       body = body.slice(0, k);
     }
     const trim = a => { while (a.length && !a[0].trim()) a.shift(); while (a.length && !a[a.length - 1].trim()) a.pop(); return a; };
-    trim(body); trim(par); trim(refl); trim(meta);
+    trim(body); trim(par); trim(more); trim(refl); trim(meta);
 
     const versesOnly = refl.length > 0 && refl.every(l => !l.trim() || l.startsWith('\\'));
     const hasRefl = isVP && refl.length > 0 && !versesOnly;
@@ -185,6 +191,15 @@
       buf.push(inline(l));
     }
     flush(); html += out;
+
+    // the rest of a long passage, collapsible
+    if (more.length) {
+      markOpen = false;
+      let p = `<details class="parallel more"><summary>${inline(moreLabel)}</summary>`, b = [];
+      const fl = () => { if (b.length) { p += `<div class="text">${hang(closeMark(b.join('\n')))}</div>`; b = []; } };
+      for (const l of more) { if (l.startsWith('~ ')) { fl(); p += `<span class="pref">${inline(l.slice(2))}</span>`; } else if (l.trim()) b.push(inline(l)); else if (b.length) b.push(''); }
+      fl(); html += p + '</details>';
+    }
 
     // gospel parallels, collapsible
     if (par.length) {

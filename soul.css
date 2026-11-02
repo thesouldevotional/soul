@@ -96,6 +96,7 @@ details.parallel summary::before { content: "+ "; color: var(--accent); }
 details.parallel[open] summary::before { content: "− "; }
 details.parallel .pref { display: inline-block; font-size: 11.5px; color: var(--muted); border: 1px solid var(--line); padding: 2px 8px; margin: 6px 0; }
 details.parallel .text { color: var(--muted); font-size: 13.5px; padding-bottom: 14px; }
+details.parallel.more .text { color: inherit; font-size: inherit; }
 
 /* reflection and footer lines */
 .reflection { margin-top: 30px; padding-top: 22px; border-top: 1px solid var(--line); }
