@@ -14,7 +14,7 @@
       legend: { refl: 'with reflection', mine: 'written by me', fav: 'my favorites' },
       types: { bible: 'bible verse', prayers: 'prayer', commonplace: 'commonplace', saints: 'saint', 'what-is-it': 'what is it', guides: 'guide' },
       nav: { 'index.html': 'index', 'archive.html': 'archive', 'saints.html': 'saints' },
-      reflection: 'reflection', alsoIn: /^→ also in/, alsoLabel: 'also in', verses: 'verses', prayers: 'prayers',
+      reflection: 'reflection', alsoIn: /^→ also in/, alsoLabel: 'also in', verses: 'verses', verse: 'verse', prayers: 'prayers',
       footer: 'soul · digital devotional journal', loading: 'loading…', error: 'error loading file.',
       book: 'book…', topic: 'topic…', all: 'show everything', allTopics: 'all topics', top: '↑ top', whatIs: 'what is it',
       mineBtn: 'written by me', favBtn: 'favorites', none: 'nothing here yet',
@@ -27,7 +27,7 @@
       legend: { refl: 'con riflessione', mine: 'scritte da me', fav: 'le mie preferite' },
       types: { bible: 'versetto', prayers: 'preghiera', commonplace: 'citazione', saints: 'santo', 'what-is-it': "cos'è", guides: 'guida' },
       nav: { 'index.html': 'indice', 'archive.html': 'archivio', 'saints.html': 'santi' },
-      reflection: 'riflessione', alsoIn: /^→ presente anche in/, alsoLabel: 'presente anche in', verses: 'versetti', prayers: 'preghiere',
+      reflection: 'riflessione', alsoIn: /^→ presente anche in/, alsoLabel: 'presente anche in', verses: 'versetti', verse: 'versetto', prayers: 'preghiere',
       footer: 'soul · diario devozionale digitale', loading: 'caricamento…', error: 'errore nel caricamento del file.',
       book: 'libro…', topic: 'argomento…', all: 'mostra tutto', allTopics: 'tutti gli argomenti', top: '↑ inizio', whatIs: "cos'è",
       mineBtn: 'scritte da me', favBtn: 'preferite', none: 'ancora niente qui',
@@ -210,7 +210,7 @@
         qq.push(inline(t));
       }
       fl();
-      html += `<details class="parallel"><summary>${I.verses} · ${refs.map(esc).join(' · ')}</summary>${p}</details>`;
+      html += `<details class="parallel"><summary>${refs.length > 1 ? I.verses : I.verse} · ${refs.map(esc).join(' · ')}</summary>${p}</details>`;
     } else if (refl.length) {
       markOpen = false;
       let rq = null, rb = [], r = '';
