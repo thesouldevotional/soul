@@ -15,4 +15,4 @@ guide | prayer paths
     ↳ [when the hunger comes](post.html?p=prayers/when-the-hunger-comes.txt)
     ↳ [breaking the fast](post.html?p=prayers/breaking-the-fast.txt)
   → distracted mind
-    ↳ [gather my scattered mind](post.html?p=prayers/gather-my-scattered-mind.txt)
+    ↳ [gather my scattered mind](post.html?p=prayers/gather-my-scattered-mind.txt) ☆
