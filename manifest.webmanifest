@@ -1,0 +1,14 @@
+{
+  "name": "soul",
+  "short_name": "soul",
+  "lang": "en",
+  "start_url": "/soul/index.html",
+  "scope": "/soul/",
+  "display": "standalone",
+  "background_color": "#c4501a",
+  "theme_color": "#c4501a",
+  "icons": [
+    { "src": "/soul/apple-touch-icon.png?v=20261102", "sizes": "180x180", "type": "image/png" },
+    { "src": "/soul/icon-512.png?v=20261102", "sizes": "512x512", "type": "image/png" }
+  ]
+}
