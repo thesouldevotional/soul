@@ -35,6 +35,9 @@ NAMES = ['peter', 'paul', 'moses', 'abraham', 'isaac', 'jacob', 'david', 'elijah
          'pietro', 'paolo', 'mosè', 'abramo', 'isacco', 'giacobbe', 'davide', 'elia', 'eliseo', 'isaia',
          'geremia', 'maria', 'giuseppe', 'giuda', 'pilato', 'satana', 'israele', 'gerusalemme', 'egitto',
          'nazaret', 'galilea', 'betlemme']
+# always lowercase on the site (Ivana's decision, 2026-11-04), even at the start of a sentence
+LOWER_ONLY = re.compile(r"(?<![\w/=._-])(Old|New|Antico|Nuovo)? ?\b(Bibles?|Christians?|Catholics?|Testaments?|Gospels?|"
+                        r"Bibbi[ae]|Testament[oi]|Vangel[oi]|Cristian[oaie]|Cattolic[oaie]|Cattolici)\b(?![\w/._-])")
 PRONOUNS = {
     'en': r"\b(he|him|his|himself|you|your|yours|yourself|me|my|mine|myself)\b",
     'it': r"\b(lui|egli|suo|sua|suoi|sue|tu|te|tuo|tua|tuoi|tue|mio|mia|miei|mie|me)\b",
@@ -108,6 +111,9 @@ def audit(repo, lang):
                 errors.append(f'{rel}:{n}  "LORD" -> "Lord"')
             for m in names.finditer(line):
                 errors.append(f'{rel}:{n}  name "{m.group(0)}" lowercase')
+            if os.path.basename(f) != 'saints-index.txt':
+                for m in LOWER_ONLY.finditer(line):
+                    errors.append(f'{rel}:{n}  "{m.group(0).strip()}" -> lowercase')
             for m in re.finditer(r'(?<![\w/=_-])(psalms?|salm[oi]) \d', line):
                 errors.append(f'{rel}:{n}  book name "{m.group(0)}" lowercase')
             # pronouns: only title + verse lines of files changed since the last commit

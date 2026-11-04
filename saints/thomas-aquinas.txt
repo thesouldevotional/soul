@@ -19,8 +19,8 @@ December 1273 | stops writing the Summa Theologiae after a mystical experience d
 March 7, 1274 | dies at the Cistercian abbey of Fossanova, near Terracina, traveling to the Second Council of Lyon
 1323 | canonized by Pope John XXII
 1567 | declared a Doctor of the Church by Pope Pius V, titled Doctor Angelicus
-1879 | Pope Leo XIII's encyclical Aeterni Patris establishes His thought as the model for Catholic philosophy and theology
-1880 | declared patron of all Catholic schools, colleges, and universities
+1879 | Pope Leo XIII's encyclical Aeterni Patris establishes His thought as the model for catholic philosophy and theology
+1880 | declared patron of all catholic schools, colleges, and universities
 
 ↳ quotes
 \ we cannot know what God is, but rather what He is not.
@@ -38,7 +38,7 @@ March 7, 1274 | dies at the Cistercian abbey of Fossanova, near Terracina, trave
 * when Moses asks God's name, the answer is "[I AM WHO I AM](post.html?p=bible/exodus_3-14.txt)" — not a name in the usual sense, a name that just states existence itself. Aquinas builds His whole doctrine of God on that one line: God isn't a being among beings, competing for space with everything else that exists, God is the act of existing itself, the reason anything is there to be counted at all. it reframes the question people still ask today ("does God exist?") as a category error — existence isn't a property God happens to have, it's what the word God means.
 * "to love is to will the good of another" collapses a distinction the modern world works hard to keep blurred: love as a feeling that happens to you, or love as an act you choose to make happen for someone else. Aquinas's definition leaves no room for love that stays comfortable — another person's flourishing, not your own emotional state, is the measure. it's the same reorientation behind the commandment to love your neighbor as yourself: named an act of will, not a mood you either have or don't.
 * His definition of beauty — wholeness, harmony, radiance — reads like an aesthetics textbook until you notice it's really a description of coherence: a thing is beautiful when nothing in it is missing, nothing fights against anything else, and what it is shows through clearly. the same three tests work on a life, a piece of music, an argument, not just a painting.
-* His broader legacy: six centuries after His canonization, Leo XIII's Aeterni Patris made His thought the standard curriculum of Catholic philosophy and theology, and it still is — every seminary and Catholic university teaching philosophy of religion today is, in some measure, still working inside the synthesis of faith and reason Aquinas built by putting Aristotle and Christian theology in the same room and refusing to let either one leave.
+* His broader legacy: six centuries after His canonization, Leo XIII's Aeterni Patris made His thought the standard curriculum of catholic philosophy and theology, and it still is — every seminary and catholic university teaching philosophy of religion today is, in some measure, still working inside the synthesis of faith and reason Aquinas built by putting Aristotle and christian theology in the same room and refusing to let either one leave.
 
 ↳ connections
 ↳ verse: [Exodus 3:14](post.html?p=bible/exodus_3-14.txt) — I AM who I AM *
