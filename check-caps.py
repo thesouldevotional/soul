@@ -108,6 +108,8 @@ def audit(repo, lang):
                 errors.append(f'{rel}:{n}  "LORD" -> "Lord"')
             for m in names.finditer(line):
                 errors.append(f'{rel}:{n}  name "{m.group(0)}" lowercase')
+            for m in re.finditer(r'(?<![\w/=_-])(psalms?|salm[oi]) \d', line):
+                errors.append(f'{rel}:{n}  book name "{m.group(0)}" lowercase')
             # pronouns: only title + verse lines of files changed since the last commit
             if f in touched and (n == 1 or raw.startswith('[') or raw.startswith('!![')):
                 for m in pron.finditer(line):
