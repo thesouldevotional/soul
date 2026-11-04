@@ -310,7 +310,7 @@
       if (m) {
         const name = m[2].trim();
         const wi = m[3].match(/href="([^"]+)"/);
-        cur = { id: m[1], name, type: /^[A-ZÀ-Ý0-9]/.test(name) ? 'book' : 'topic', what: wi ? wi[1] : '', groups: [] };
+        cur = { id: m[1], name, type: wi ? 'book' : 'topic', what: wi ? wi[1] : '', groups: [] };
         if (cur.type === 'book') { sub = { id: '', name: '', rows: [] }; cur.groups.push(sub); }
         secs.push(cur); continue;
       }

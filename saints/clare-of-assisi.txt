@@ -46,4 +46,4 @@ c. 1216 | becomes abbess of San Damiano, a role She holds for nearly forty years
 ↳ verse: [Philippians 4:19](post.html?p=bible/philippians_4-19.txt) — God will supply all our needs *
 ↳ verse: [Psalms 46:10](post.html?p=bible/psalms_46-10.txt) — be still and know that I am God *
 ↳ prayer: [guard my heart](post.html?p=prayers/guard-my-heart.txt)
-↳ prayer: [closer than I can fathom](post.html?p=prayers/closer-than-i-can-fathom.txt)
+↳ prayer: [closer than i can fathom](post.html?p=prayers/closer-than-i-can-fathom.txt)
