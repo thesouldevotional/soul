@@ -8,6 +8,7 @@ guide | prayer paths
     ↳ [midday (working days)](post.html?p=prayers/midday-prayer-working-days.txt) ✎
     ↳ [midday (rest days)](post.html?p=prayers/midday-prayer-rest-days.txt) ✎
     ↳ [evening prayer](post.html?p=prayers/evening-prayer.txt) ✎
+    ↳ [evening prayer (2)](post.html?p=prayers/evening-prayer-2.txt) ☆
 → for specific moments
   → if you want to fast
     ↳ [what fasting is and why it helps](post.html?p=guides/fasting.txt)
