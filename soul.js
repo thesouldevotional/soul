@@ -412,7 +412,8 @@
   function simpleList() {
     const card = document.getElementById('card');
     const rows = flatRows().map(r => ({ href: r.href, title: r.a, mk: r.mk }));
-    card.insertAdjacentHTML('beforeend', rows.map(rowHTML).join(''));
+    const hasFav = rows.some(r => r.mk.fav);
+    card.insertAdjacentHTML('beforeend', (hasFav ? legend(['fav']) : '') + rows.map(rowHTML).join(''));
     finish(card);
   }
 
