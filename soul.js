@@ -192,6 +192,11 @@
     }
     flush(); html += out;
 
+    // English verses only: the same passage in the KJV, on Bible Gateway
+    if (type === 'bible' && LANG === 'en' && kind) {
+      html += `<div class="alt"><a href="https://www.biblegateway.com/passage/?search=${encodeURIComponent(kind)}&amp;version=KJV" target="_blank" rel="noopener">↳ read the KJV version</a></div>`;
+    }
+
     // the rest of a long passage, collapsible
     if (more.length) {
       markOpen = false;

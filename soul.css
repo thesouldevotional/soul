@@ -77,6 +77,8 @@ h1 .sym { font-size: 18px; vertical-align: .35em; margin-left: 6px; }
 .text { font-size: 14px; line-height: 1.75; white-space: pre-wrap; overflow-wrap: break-word; }
 .num { font-size: 10px; color: var(--muted); vertical-align: .4em; margin-right: 2px; }
 .muted { color: var(--muted); font-size: 12px; }
+.alt { font-size: 12px; margin-top: 12px; }
+.alt a, .alt a:visited { color: var(--muted); }
 mark { background: linear-gradient(transparent 55%, var(--mark) 55%); color: inherit; padding: 0 1px; }
 a, a:visited { color: var(--link); text-decoration: none; }
 a:hover { text-decoration: underline; }
