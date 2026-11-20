@@ -175,6 +175,12 @@ select { font: 12.5px var(--mono); color: var(--text); background-color: var(--c
 .card.home { max-width: 400px; padding: 32px 28px 24px; }
 .card.home .theme-toggle { top: 20px; right: 20px; box-shadow: none; border: 1px solid var(--line); }
 
+/* facing translations (e.g. a latin prayer with english and italian beside it) */
+.facing { display: grid; gap: 12px; margin: 0 0 22px; }
+.facing .flabel { display: block; font-size: 11px; color: var(--muted); margin-bottom: 2px; }
+.facing .side { display: flex; flex-direction: column; gap: 8px; }
+.facing .fcard { border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; font-size: 12.5px; line-height: 1.6; white-space: pre-wrap; overflow-wrap: break-word; }
+
 /* legacy pages (rosary, skeptical, standalone commonplace) */
 .legacy pre { font: inherit; font-size: 14px; line-height: 1.75; white-space: pre-wrap; overflow-wrap: break-word; margin: 0; }
 .legacy .counter { color: var(--muted); font-size: 11px; }
@@ -211,6 +217,7 @@ select { font: 12.5px var(--mono); color: var(--text); background-color: var(--c
   h1.title { font-size: 42px; }
   .text { font-size: 15px; }
   .legacy .q-grid { grid-template-columns: 1.3fr 1fr; gap: 28px; }
+  .facing { grid-template-columns: 1.3fr 1fr; gap: 28px; align-items: start; }
 }
 @media (min-width: 1100px) {
   .card.home { max-width: 1040px; grid-template-columns: 260px 1fr; }

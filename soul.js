@@ -20,6 +20,7 @@
       mineBtn: 'written by me', favBtn: 'favorites', none: 'nothing here yet',
       subVerses: /-verses$/, subPrayers: /-prayers$/,
       mineLine: /^↳ written by me\s*$/, favLine: /^↳ one of my favorites\s*$/,
+      langs: { la: 'latin', en: 'english', it: 'italian' },
       other: 'en', otherLang: 'it'
     },
     it: {
@@ -33,6 +34,7 @@
       mineBtn: 'scritte da me', favBtn: 'preferite', none: 'ancora niente qui',
       subVerses: /-versetti$/, subPrayers: /-preghiere$/,
       mineLine: /^↳ scritta da me\s*$/, favLine: /^↳ una delle mie preferite\s*$/,
+      langs: { la: 'latino', en: 'inglese', it: 'italiano' },
       other: 'it', otherLang: 'en'
     }
   }[LANG];
@@ -189,6 +191,28 @@
     const flushQ = () => { if (q) { out += `<div class="quote">${hang(closeMark(q.join('\n')))}</div>`; q = null; } };
     const flushB = () => { if (buf.length) { out += `<div class="text">${hang(closeMark(buf.join('\n')))}</div>`; buf = []; } };
     const flush = () => { flushB(); flushQ(); };
+    // facing translations: "§ la" names the original's language, "⫽ en: text" lines are a stanza's translations,
+    // shown in cards beside it (side by side on wide screens, below on phones)
+    if (body.some(l => /^⫽ /.test(l))) {
+      let orig = '';
+      const st = []; let cur = [];
+      for (const l of body) {
+        const o = l.match(/^§ ([a-z]{2})\s*$/);
+        if (o) { orig = o[1]; continue; }
+        if (!l.trim()) { if (cur.length) { st.push(cur); cur = []; } } else cur.push(l);
+      }
+      if (cur.length) st.push(cur);
+      for (const s of st) {
+        const src = [], tr = {};
+        for (const l of s) { const m = l.match(/^⫽ ([a-z]{2}): ?(.*)$/); if (m) (tr[m[1]] = tr[m[1]] || []).push(m[2]); else src.push(l); }
+        const langs = Object.keys(tr).sort((a, b) => (b === LANG) - (a === LANG));
+        markOpen = false;
+        out += `<div class="facing"><div class="text">${orig && s === st[0] ? `<span class="flabel">${esc(I.langs[orig] || orig)}</span>` : ''}${hang(closeMark(src.map(inline).join('\n')))}</div><div class="side">`;
+        for (const k of langs) { markOpen = false; out += `<div class="fcard"><span class="flabel">${esc(I.langs[k] || k)}</span>${closeMark(tr[k].map(inline).join('\n'))}</div>`; }
+        out += '</div></div>';
+      }
+      body = [];
+    }
     for (const l of body) {
       if (l === '---') { flush(); out += '<hr class="div">'; continue; }
       if (/^\s+→ /.test(l)) { flush(); out += `<h4 class="gs">${inline(l.trim().slice(2))}</h4>`; continue; }
