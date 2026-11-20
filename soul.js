@@ -61,12 +61,23 @@
   const closeMark = h => markOpen ? h + '</mark>' : h;
 
   // hanging indents: bullets, ⭢ sub-points, indented continuation lines, numbered items
+  // line by line, so a continuation line right after a bullet is still seen as a line start;
+  // a block span replaces the newline that follows it
+  const HANG = [
+    [/^[ \t]*\* (.*)$/, '<span class="hg b">* $1</span>'],
+    [/^[ \t]*⭢ (.*)$/, '<span class="hg s">⭢ $1</span>'],
+    [/^[ \t]{5,}(?![*⭢↳])(\S.*)$/, '<span class="hg c">$1</span>'],
+    [/^(\d+\.)( +)((?:(?!<div|<details).)*)$/, (m, n, sp, r) => `<span class="hg n" style="--w:${n.length + sp.length}ch">${n}${sp}${r}</span>`],
+  ];
   function hang(s) {
-    return s
-      .replace(/^[ \t]*\* (.*)(\n|$)/gm, '<span class="hg b">* $1</span>')
-      .replace(/^[ \t]*⭢ (.*)(\n|$)/gm, '<span class="hg s">⭢ $1</span>')
-      .replace(/^[ \t]{5,}(?![*⭢↳])(\S.*)(\n|$)/gm, '<span class="hg c">$1</span>')
-      .replace(/^(\d+\.)( +)((?:(?!<div|<details).)*)(\n|$)/gm, (m, n, sp, r) => `<span class="hg n" style="--w:${n.length + sp.length}ch">${n}${sp}${r}</span>`);
+    let out = '', block = false;
+    s.split('\n').forEach((l, i) => {
+      const rule = HANG.find(([re]) => re.test(l));
+      if (i > 0 && !block) out += '\n';
+      out += rule ? l.replace(rule[0], rule[1]) : l;
+      block = !!rule;
+    });
+    return out;
   }
 
   function banner(label, pal) { return `<div class="banner p-${pal}"><span class="tag">${esc(label)}</span></div>`; }
